@@ -33,8 +33,9 @@ size_t processAmount() { //gets amount of processes
 		if(S_ISDIR(filestat.st_mode)) { //checks if file is directory
 			count += isNum(entry->d_name);
 		}
-		free(entry);
 	}
+	free(entry);
+	closedir(folder);
 	return count;
 }
 
