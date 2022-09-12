@@ -8,7 +8,7 @@ OUTBIN := psx
 .PHONY: install clean
 
 install: $(OBJS)
-	$(CC) $(CFLAGS) $(SRC) -o $(OUTBIN)
+	$(CC) $(CFLAGS) $(OBJS) -o $(OUTBIN)
 
 
 %.o: %.c
